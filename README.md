@@ -112,3 +112,10 @@ Prontinho seu projeto está configurado.
 No terminal com o diretório principal do projeto, rode:
 
 `npm run test`
+
+## Recomendação de Arquitetura do Teste Cypress
+
+Diretórios
+
+- fixtures - Estrutura que se define uma massa de testes estática, um arquivo que já está pronto, que não terá nenhuma alteração e vamos utilizar de uma forma padronizada para automação de nossos testes;
+- integration - Diretório onde estará localizado nossas implementações dos testes automatizados
