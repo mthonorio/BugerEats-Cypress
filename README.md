@@ -109,13 +109,18 @@ Prontinho seu projeto está configurado.
 
 **Obs:** Certifique-se de visualizar no diretório de seu projeto, a pasta _cypress_.
 
-No terminal com o diretório principal do projeto, rode:
+No terminal com o diretório principal do projeto, rode para abrir a interface de tests do cypress:
 
 `npm run test`
 
-## Recomendação de Arquitetura do Teste Cypress
+Para rodar seus testes em modo headless, modo onde os testes rodam em background e o usuário não necessita visualizar o navegador ou abrir o cypress interface, (_recomendado para ingressar os testes no docker, pipeline, etc_). Basta rodar no terminal:
 
-Diretórios
+`npx cypress run`
 
-- fixtures - Estrutura que se define uma massa de testes estática, um arquivo que já está pronto, que não terá nenhuma alteração e vamos utilizar de uma forma padronizada para automação de nossos testes;
-- integration - Diretório onde estará localizado nossas implementações dos testes automatizados
+## Instruções e Recomendação de Estrutura de Diretórios
+
+- **fixtures** - Estrutura que se define uma massa de testes estática(_mocks_), um arquivo que já está pronto, que não terá nenhuma alteração podendo ser utilizado em qualquer teste;
+- **integration** - Diretório onde estará localizado nossas implementações dos testes automatizados;
+- **plugins** - Possibilita trocar, modificar ou estender o comportamento interno do Cypress;
+- **support** - Neste diretório é possível criar comandos que podem ser executados dentro dos testes ou sobrescrever comandos já existentes;
+- **pages** - Nossos Pages Objects, utilizados para criar funções e exporta-las para serem utilizadas em nossos testes automáticos.
